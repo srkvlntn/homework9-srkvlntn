@@ -1,0 +1,215 @@
+/* Обертка которая обрезает все лишнее что выходит за ширину страници,
+к примеру если вы что то вытаскиваете марджинами то у вас появится горизонтальный скролл на странице, эта обертка его срезает
++ если вы забыли указать position: relative; на нужном блоке, это ваша отправная точка для позиционирования,
+чтобы не трогать body
+эта обертка есть в каждом проекте */
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+/* Элемент который центрирует контент на странице (только центрирует) */
+
+.container {
+	width: 500px;
+	height: auto;
+	padding: 33px 53px;
+	border: 1px solid #e0e9f0;
+	background-image: url(../../img/forms-button.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
+}
+
+/* Обертка для полей формы */
+
+.form {
+	margin-bottom: 15px;
+}
+
+/* Поля формы */
+
+.search-form {
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.search-form .btn-search {
+	border: none;
+	color: #009688;
+	background-size: 20px 20px;
+	background-color: #fff;
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	top: 2px;
+	border-radius: 0 3px 3px 0;
+	width: 50px;
+	font-size: 18px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.form-control {
+	padding: 10px 65px 10px 15px;
+	border: 2px solid rgba(224,233,240,.6);
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	resize: none;
+	background-color: rgba( 255, 255, 255,.1);
+}
+
+.form-control:focus {
+	outline: none;
+	border-color: #A9A9A9;
+}
+
+.form-info {
+	padding: 10px 15px;
+	border: 2px solid rgba(224,233,240,.6);
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+	resize: none;
+	background: rgba( 255, 255, 255,.1);
+}
+
+/* Стили для кроссбраузерности placeholder полей */
+
+.form-control::-webkit-input-placeholder {
+	color: #455a63;
+}
+
+.form-control::-moz-placeholder {
+	opacity: 1;
+	color: #455a63;
+}
+
+.form-control:-ms-input-placeholder {
+	color: #455a63;
+}
+
+
+.btn {
+	background-color: #009688;
+	color: #fff;
+	width: 100%;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	padding: 17px 90px;
+	margin-bottom: 20px;
+}
+
+.btn:hover {
+	background-color: rgba(	0, 150, 136, .5);
+}
+
+.radio-row {
+	display: flex;
+}
+
+.label {
+	display: flex;
+	margin-right: 50px;
+}
+
+.checkbox {
+	display: none;
+}
+
+.fake-btn {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 2px solid #e0e9f0;
+	border-radius: 5px;
+	position: relative;
+}
+
+.fake-btn::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: rgb( 119, 136, 153);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: .1s;
+}
+
+.checkbox:checked + .fake-btn::before {
+	opacity: 1;
+}
+
+.radio {
+	display: none;
+}
+
+.fake-radius {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 2px solid #e0e9f0;
+	border-radius: 50%;
+	position: relative;
+}
+
+.fake-radius::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: rgb( 119, 136, 153);
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: .1s;
+}
+
+.radio:checked + .fake-radius::before {
+	opacity: 1;
+}
+
+.text {
+	margin-left: 15px;
+}
+
+.form {
+	margin-bottom: 15px;
+}
+
+.social-networks {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.social-networks li {
+	list-style: none;
+	margin: 0 5px;
+}
+
+.social-networks a {
+	text-decoration: none;
+	color: #546e7a;
+	padding: 5px 5px;
+	width: auto;
+	font-size: 20px;
+	position: relative;
+	display: block;
+}
+
+.social-networks a:hover {
+	color: #009688;
+}
+
